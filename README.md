@@ -1,4 +1,4 @@
-Datengenerator [![Build Status](https://travis-ci.org/datenverteiler/de.bsvrz.pat.datgen.svg?branch=master)](https://travis-ci.org/datenverteiler/de.bsvrz.pat.datgen)
+Datengenerator [![Build Status](https://travis-ci.org/datenverteiler/de.bsvrz.pat.datgen.svg?branch=develop)](https://travis-ci.org/datenverteiler/de.bsvrz.pat.datgen)
 ==============
 
 
