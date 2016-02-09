@@ -1,0 +1,5 @@
+-exportcontents: \
+    de.bsvrz.pat.datgen
+-sources: true
+
+Bundle-Name: Datengenerator
