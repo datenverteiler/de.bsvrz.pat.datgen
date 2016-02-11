@@ -146,7 +146,6 @@
                             <goal>jar</goal>
                         </goals>
                         <configuration>
-                            <useDefaultManifestFile>false</useDefaultManifestFile>
                             <classifier>runtime</classifier>
                             <excludes>
                                 <exclude>**/*</exclude>
