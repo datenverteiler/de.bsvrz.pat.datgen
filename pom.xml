@@ -94,12 +94,6 @@
             <artifactId>de.bsvrz.sys.funclib.commandLineArgs</artifactId>
             <version>${kernsoftware.version}</version>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -152,8 +146,7 @@
                             <goal>jar</goal>
                         </goals>
                         <configuration>
-                            <useDefaultManifestFile>false</useDefaultManifestFile>
-                            <classifier>runtime-jar</classifier>
+                            <classifier>runtime</classifier>
                             <excludes>
                                 <exclude>**/*</exclude>
                             </excludes>
@@ -161,7 +154,9 @@
                                 <manifest>
                                     <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                                     <addClasspath>true</addClasspath>
-                                    <classpathPrefix>lib/</classpathPrefix>
+                                    <classpathLayoutType>custom</classpathLayoutType>
+                                    <customClasspathLayout>../${artifact.artifactId}/${artifact.artifactId}-runtime.${artifact.extension}</customClasspathLayout>
+                                    <mainClass>de.bsvrz.pat.datgen.generator.main.DataGenerator</mainClass>
                                 </manifest>
                                 <manifestEntries>
                                     <Class-Path>${project.artifactId}.jar ${nonBsvrzClasspath}</Class-Path>
@@ -253,8 +248,17 @@
                         <descriptor>src/assembly/distributionspaket-ohne-tests.xml</descriptor>
                     </descriptors>
                 </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>2.10</version>
                 <executions>
