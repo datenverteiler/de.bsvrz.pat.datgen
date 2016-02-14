@@ -1,7 +1,4 @@
--exportcontents: \
-    de.bsvrz.pat.datgen \
-    de.bsvrz.pat.datgen.generator.main \
-    de.bsvrz.pat.datgen.generator.xmlParser \
+-exportcontents: de.bsvrz.pat.datgen.*
 -sources: true
 
 Bundle-Name: Datengenerator
