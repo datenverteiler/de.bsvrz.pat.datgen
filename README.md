@@ -1,5 +1,5 @@
-Datengenerator [![Build Status](https://travis-ci.org/datenverteiler/de.bsvrz.pat.datgen.svg?branch=master)](https://travis-ci.org/datenverteiler/de.bsvrz.pat.datgen)
-==============
+Datengenerator v${project.version} [![Build Status](https://travis-ci.org/datenverteiler/de.bsvrz.pat.datgen.svg?branch=master)](https://travis-ci.org/datenverteiler/de.bsvrz.pat.datgen)
+======================
 
 
 Bauen und Veröffentlichen
